@@ -1,9 +1,11 @@
 // EXPRESS JS
 const express = require('express');
+const cors = require('cors');
 const app = express();
 const port = 8000;
 
-app.get('/',(req,res) => {
+app.use(cors());
+app.get('/getData',(req,res) => {
     res.send("Hello World!");
 })
 
